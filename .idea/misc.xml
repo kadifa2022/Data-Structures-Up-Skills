@@ -8,10 +8,16 @@
         <option value="$PROJECT_DIR$/dsa-02-Arrays/pom.xml" />
         <option value="$PROJECT_DIR$/dsa-03-CollectionsReview/pom.xml" />
         <option value="$PROJECT_DIR$/practice/pom.xml" />
+        <option value="$PROJECT_DIR$/dsa-04-LinkedList/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SwUserDefinedSpecifications">
+    <option name="specTypeByUrl">
+      <map />
+    </option>
   </component>
 </project>
