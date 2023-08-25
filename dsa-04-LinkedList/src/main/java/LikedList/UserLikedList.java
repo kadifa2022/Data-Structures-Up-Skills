@@ -29,8 +29,25 @@ public class UserLikedList {
         size++;// increasing size
 
 
+    }
+
+    void printNames() {
+        //1. check if list is empty
+        if (isEmpty()) {
+            System.out.println("List is empty !!!");
+            return;
+        }
+        // Go to the first element in the list
+        UserNode current = head;
+        System.out.println();
+        while (current != null) {
+            System.out.println(current.name);
+        }
 
 
     }
+
+
+
 
 }
