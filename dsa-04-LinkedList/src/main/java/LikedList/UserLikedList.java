@@ -41,7 +41,10 @@ public class UserLikedList {
         UserNode current = head;
         System.out.println();
         while (current != null) {
-            System.out.println(current.name);
+            System.out.print(current.name + " =>");
+            current = current.next;
+            if(current ==null) System.out.print("null");
+
         }
 
 
