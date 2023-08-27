@@ -11,6 +11,7 @@ public class UserLikedList {
     public UserLikedList() {
         this.size=0;
 
+
     }
 
     boolean isEmpty(){// how we are checking is list empty?
@@ -27,9 +28,21 @@ public class UserLikedList {
             tail= node;// inserting node to the tail
         }
         size++;// increasing size
-
-
     }
+
+    void insertFirst(UserNode node){
+        // case 1 list is empty
+
+        if(isEmpty()){
+            head=tail=node;
+            //case 2 not empty
+        }else{
+            node.next = head;
+            head = node;
+        }
+        size++;
+    }
+
 
     void printNames() {
         //1. check if list is empty
@@ -49,8 +62,41 @@ public class UserLikedList {
 
 
     }
+    void deleteByName(String name) {
+        // check if list is empty
+        if (isEmpty()) {
+            System.out.println("List is empty");
+            return;
+        }
+        //assigning  two nodes
+        UserNode prev = head;
+        UserNode current = head;
+        while(current != null){
+            if(current.name.equals(name)){
+                //case 1. delete fist/head
+                if(current == head){
+                    // subcase head and tail can be the same( only one element)if (cu
+                if(head ==tail) tail = null;
+                head = current.next;// null
+                current.next = null;// this is for breaking link between current and next
+                                        //case 2. delete tail/las
+                  }else if(current == tail) {
+                    prev.next = null;
+                    tail = prev;
+                                    //case 3. delete middle
+                     }else{
+                    prev.next = current.next;
+                    current.next = null;
+                }
+
+                size--;
+            }
+            // move to next node
+            prev=current;
+            current=current.next;
+        }
 
 
-
+    }
 
 }

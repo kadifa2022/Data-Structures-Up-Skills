@@ -9,6 +9,11 @@ public class UserListApp {
         myLinkedListSingle.insertLast(new UserNode("Lola", "Bailey"));
         myLinkedListSingle.insertLast(new UserNode("Tina", "Terine"));
         myLinkedListSingle.printNames();
+        myLinkedListSingle.insertFirst(new UserNode("Subzero", "test"));
+        myLinkedListSingle.printNames();
+        myLinkedListSingle.deleteByName("Subzero");
+        System.out.println(" Size : " + myLinkedListSingle.size);
+        myLinkedListSingle.printNames();
 
     }
 }
