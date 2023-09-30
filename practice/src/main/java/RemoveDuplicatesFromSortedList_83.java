@@ -20,15 +20,15 @@ public class RemoveDuplicatesFromSortedList_83 {
     }
 
     public static ListNode removeDuplicates(ListNode head){
-        ListNode current = head;
-        while(current != null && current.next !=null){
-            if(current.next.val == current.val){
-                current.next = current.next.next;
+        ListNode current = head; //assigning to the head
+        while(current != null && current.next !=null){// checking if the first and next node exist
+            if(current.next.val == current.val){// checking first and next node if they are same value
+                current.next = current.next.next;// if they are the same value go to the next.next node
             }else{
-                current= current.next;
+                current= current.next;// otherwise go to next node
             }
         }
-        return head;
+        return head; //return the head
 
     }
 }
