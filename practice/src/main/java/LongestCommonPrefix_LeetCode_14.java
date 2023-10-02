@@ -2,6 +2,9 @@ public class LongestCommonPrefix_LeetCode_14 {
 
     public static void main(String[] args) {
 
+        String [] str = {"flower", "flow", "flight"};
+        System.out.println(longestCommonPrefix(str));
+
     }
 
     public static String longestCommonPrefix( String [] str){
@@ -12,7 +15,7 @@ public class LongestCommonPrefix_LeetCode_14 {
         // we  loop from second element(fist index)  through the rest
         for (int i = 1;i<str.length; i++){
             // while current string "flow". indexOf(prefix) is not equals to 0
-            while(str[i].indexOf(prefix) !=0){
+            while(str[i].indexOf(prefix) !=0){ // prefix is flower
             // if we can not find  prefix on the beginning of the string, we will decrease size of the string
             prefix = prefix.substring(0, prefix.length()-1); // this will reduce character by one each time
 
