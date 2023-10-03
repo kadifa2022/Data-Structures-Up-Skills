@@ -19,9 +19,10 @@ public class TwoSum_II_leetcode_167 {// input Array is sorted
         return new int[]{-1,-1};
     }
 
-    // two pointers -> linear
+    // Second solution with two pointers -> linear
 
 
-    //base
+
+
 
 }
