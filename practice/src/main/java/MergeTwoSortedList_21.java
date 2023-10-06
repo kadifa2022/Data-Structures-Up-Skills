@@ -12,7 +12,7 @@ public class MergeTwoSortedList_21 {
     }
 
     public  ListNode1 mergeTwoLists(ListNode1 list1, ListNode1 list2) {
-        // base
+        // base case
 
         if (list1 == null) {
             return list2;
@@ -20,7 +20,7 @@ public class MergeTwoSortedList_21 {
         if (list2 == null) {
             return list1;
         }
-
+        // finding out the head of the new formed list
         ListNode1 head;
 
         if (list1.val < list2.val) {
@@ -30,7 +30,7 @@ public class MergeTwoSortedList_21 {
             head = list2;
             list2= list2.next;
         }
-        head.next = mergeTwoLists(list1, list2);
+        head.next = mergeTwoLists(list1, list2); // recursive stop
         return head;
 
 
