@@ -61,7 +61,7 @@ else if 'square' is less than 'x'
 -left -mid
 else
 right = mid -1
-Return' left' which 'left -left' will be the largest square that is less than 'x'
+Return (int) left;=> which 'left -left' will be the largest square that is less than 'x'
 
 
 
