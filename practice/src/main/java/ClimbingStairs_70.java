@@ -2,6 +2,7 @@ public class ClimbingStairs_70 {
 
     public static void main(String[] args) {
         System.out.println(climbingStairs2(6));
+        System.out.println(climbingStairs3(6));
 
     }
 
@@ -20,6 +21,17 @@ public class ClimbingStairs_70 {
       return step2;
 
     }
+
+    public static  int climbingStairs3(int n) {
+        int[] ways = new int[n + 1];
+        ways[0] = 1;
+        ways[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            ways[i] = ways[i - 1] + ways[i - 2];
+        }
+        return ways[n];
+    }
+
 }
 
 /*
