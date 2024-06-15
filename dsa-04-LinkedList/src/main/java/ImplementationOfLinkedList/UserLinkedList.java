@@ -8,22 +8,23 @@ public class UserLinkedList {
     UserNode tail;
     int size;
 
-    public UserLinkedList(){
+    public UserLinkedList() {
         this.size = 0;
     }
-    boolean isEmpty(){// checking if linkedList is empty
+
+    boolean isEmpty() {// checking if linkedList is empty
         return head == null;
     }
 
-    void insertLast(UserNode node){
+    void insertLast(UserNode node) {
         // list is empty
-        if(isEmpty()){
-            head=tail =node;
-        }else{// not empty, put after tail
+        if (isEmpty()) {
+            head = tail = node;
+        } else {// not empty, put after tail
             tail.next = node;
             tail = node;
         }
-        size ++ ;
+        size++;
     }
 
     void printNames() {
@@ -34,6 +35,7 @@ public class UserLinkedList {
         }
         // Assign current value to the head
         UserNode current = head;
+        System.out.println();
         //loop
         while (current != null) {
             System.out.print(current.name + " => ");
@@ -57,9 +59,8 @@ public class UserLinkedList {
                     if (head == tail) tail = null;
                     head = current.next;
                     current.next = null; // break reference from current
-                }
-                //case 2: tail
-                if (current == tail) {
+                    //case 2: tail
+                } else if (current == tail) {
                     prev.next = null;
                     tail = prev;
                 } else {// case 3: middle
@@ -68,9 +69,9 @@ public class UserLinkedList {
                 }
                 size--;
             }
+            prev = current;
+            current = current.next;
         }
-        prev = current;
-        current = current.next;
-    }
 
+    }
 }
