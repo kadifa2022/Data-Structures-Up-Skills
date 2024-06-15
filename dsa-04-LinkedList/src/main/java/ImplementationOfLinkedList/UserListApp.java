@@ -8,6 +8,8 @@ public class UserListApp {
         list.insertLast(new UserNode("Jack", "Reacher"));
         list.insertLast(new UserNode("Tina", "Blay"));
         list.printNames();
+       list.deleteByName("Tina");
+        list.printNames();
 
 
     }
