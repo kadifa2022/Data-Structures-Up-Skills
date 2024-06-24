@@ -14,7 +14,15 @@ public class ArrayListReview {
         ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(arr));
 
         // Convert an Array to ArrayList with Collections.addAll()
+        List<Integer> list3 = new ArrayList<>();
+        Collections.addAll(list3, arr);
+        System.out.println(list3);
 
-        Collections.addAll(list, arr);
+        // Convert an ArrayList to the Array
+        List<Integer> nums = new ArrayList<Integer>();
+
+        Integer [] arr2 = nums.toArray( new Integer[0]);
+        //converting an ArrayList to Array with stream()
+        int[] arr3 = nums.stream().mapToInt(i->i).toArray();
     }
 }
