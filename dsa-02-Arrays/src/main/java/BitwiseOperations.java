@@ -1,4 +1,4 @@
-public class BiwiseOperations {
+public class BitwiseOperations {
     public static void main(String[] args) {
         int N = 120;
         for(int i = 0; i<32;i++){

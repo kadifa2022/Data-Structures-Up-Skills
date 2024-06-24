@@ -10,7 +10,7 @@ public class KidsWithCandies {
     }
 
     public static List<Boolean> kidsWithCandies(int [] candies, int extraCandies){
-        //create return type
+        //1.create return type
         List<Boolean> result = new ArrayList<>();
         // time complexity o(n)  no space complexity
         //find max candies with loop
