@@ -21,6 +21,7 @@ public class BoxAverage {
     }
 
 
+
     public static int boxAverage(ArrayList<Integer> ans) {
         // this is default OUTPUT. You can change it and add() s to array
         int result = -404;
@@ -30,10 +31,10 @@ public class BoxAverage {
         //loop find min and max
         for (Integer an : ans) {
             if (an > max) max = an;
-            else if (an > min) min = an;
+            else if (an < min) min = an;
         }
         //return the average of min and max
-        result = (int) Math.ceil((double) (min + max) / 2);
+        result = (int) Math.ceil((double) (min + max)/2);
         return result;
 
     }
