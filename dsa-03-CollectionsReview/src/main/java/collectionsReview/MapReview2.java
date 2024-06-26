@@ -27,6 +27,13 @@ public class MapReview2 {
         Set<Integer> keySet = studentMap.keySet();
         System.out.println(keySet);
 
+        for (Integer integer : keySet) {
+            System.out.println(integer);
+
+        }
+
+
+
 
 
 
