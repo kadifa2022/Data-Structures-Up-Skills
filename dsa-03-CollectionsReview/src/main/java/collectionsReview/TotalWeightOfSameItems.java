@@ -31,10 +31,7 @@ public class TotalWeightOfSameItems {
             row.add(item);
             row.add(map.get(item));
             result.add(row);
-
         }
-
         return result;
     }
-
 }
