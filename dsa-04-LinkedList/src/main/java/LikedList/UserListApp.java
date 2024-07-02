@@ -15,5 +15,7 @@ public class UserListApp {
         System.out.println(" Size : " + myLinkedListSingle.size);
         myLinkedListSingle.printNames();
 
+
+
     }
 }
