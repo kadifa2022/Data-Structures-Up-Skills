@@ -1,4 +1,4 @@
-package LikedList;
+package likedList;
 
 public class Person {
     String name;

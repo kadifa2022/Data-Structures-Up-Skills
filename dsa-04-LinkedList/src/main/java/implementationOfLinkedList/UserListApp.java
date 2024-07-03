@@ -1,4 +1,4 @@
-package ImplementationOfLinkedList;
+package implementationOfLinkedList;
 
 public class UserListApp {
     public static void main(String[] args) {

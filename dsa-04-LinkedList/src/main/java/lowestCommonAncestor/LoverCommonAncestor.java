@@ -1,4 +1,4 @@
-package LowestCommonAncestor;
+package lowestCommonAncestor;
 
 public class  LoverCommonAncestor {
     public static void main(String[] args) {

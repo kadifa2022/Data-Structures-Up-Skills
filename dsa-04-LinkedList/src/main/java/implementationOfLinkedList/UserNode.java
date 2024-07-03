@@ -1,4 +1,4 @@
-package ImplementationOfLinkedList;
+package implementationOfLinkedList;
 
 public class UserNode {
     String name;

@@ -1,4 +1,4 @@
-package LowestCommonAncestor;
+package lowestCommonAncestor;
 
 public class TreeNode {
     int val;

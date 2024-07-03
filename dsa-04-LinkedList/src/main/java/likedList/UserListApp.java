@@ -1,4 +1,4 @@
-package LikedList;
+package likedList;
 
 public class UserListApp {
     public static void main(String[] args) {

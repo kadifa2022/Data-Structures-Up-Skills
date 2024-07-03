@@ -4,8 +4,9 @@ import java.util.Map;
 public class TwoSumOptimal {
 
     public static void main(String[] args) {
-        int [] array = new int[] {2,7,9,11};
-        System.out.println(twoSumOptimalSolution(array, 9));
+        int [] array= new int[] {2,7,9,11};
+        int targetValue= 9;
+        System.out.println(twoSumOptimalSolution(array, targetValue));
     }
     //complexity of solution is O(n), space complexity O(n)
      public static int[] twoSumOptimalSolution(int [] array, int targetValue){
@@ -22,4 +23,20 @@ public class TwoSumOptimal {
         return new int[] {};
 
     }
+
+    //second solution
+    public static int [] twoSum2(int [] nums, int target){
+        Map<Integer, Integer> complements = new HashMap<>();
+
+        for(int i = 0; i<nums.length; i++){
+            Integer complementIndex = complements.get(nums[i]);
+            if(complementIndex !=null){
+                return new int[]{i, complementIndex};
+            }
+            complements.put(target- nums[i], i);
+        }
+        return  nums;
+
+    }
+
 }
