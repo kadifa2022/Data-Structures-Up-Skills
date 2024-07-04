@@ -1,12 +1,15 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSumOptimal {
 
     public static void main(String[] args) {
-        int [] array= new int[] {2,7,9,11};
-        int targetValue= 9;
-        System.out.println(twoSumOptimalSolution(array, targetValue));
+
+        int [] array = new int[] {2,7,9,11};
+        int targetValue = 13;
+        int result [] = twoSumOptimalSolution(array, targetValue);
+        System.out.println(Arrays.toString(result));
     }
     //complexity of solution is O(n), space complexity O(n)
      public static int[] twoSumOptimalSolution(int [] array, int targetValue){
@@ -33,7 +36,7 @@ public class TwoSumOptimal {
             if(complementIndex !=null){
                 return new int[]{i, complementIndex};
             }
-            complements.put(target- nums[i], i);
+            complements.put(target - nums[i], i);
         }
         return  nums;
 
