@@ -42,4 +42,19 @@ public class LongestSubstring {
         }
         return maxLength;
     }
-}
+
+    public static int lengthOfTheLongestSubstring3(String s){
+        int maxSubstring = 0;
+        for(int right =0, left =0; right < s.length(); right++){
+            int firstPotentialSubstring = s.indexOf(s.charAt(right),left);
+                if(firstPotentialSubstring != right ){
+                    left = firstPotentialSubstring + 1;
+                }
+               maxSubstring = Math.max(maxSubstring, right -left +1);
+            }
+        return maxSubstring;
+        }
+
+    }
+
+
