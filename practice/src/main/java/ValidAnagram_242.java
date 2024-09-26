@@ -2,8 +2,9 @@ public class ValidAnagram_242 {
     public static void main(String[] args) {
 
         String s = "anagram";
-        String t = "nagaram";
+        String t = "nagarm";
         System.out.println(isAnagram(s, t));
+        System.out.println(isAnagram2(s, t));
 
 
     }
@@ -24,6 +25,21 @@ public class ValidAnagram_242 {
             }
         }
         return  true;
+    }
+
+    public static boolean isAnagram2(String s, String t){
+        if(s.length() != t.length()) return false;
+        int [] char_count= new int[26];
+
+        for(int i = 0; i<s.length(); i++){
+            char_count[s.charAt(i)-'a']++;
+        }
+        for(int i=0; i<t.length(); i++){
+            if(char_count[t.charAt(i)-'a']==0) return false;
+            char_count[t.charAt(i)-'a']--;
+
+        }
+        return true;
     }
 
 
