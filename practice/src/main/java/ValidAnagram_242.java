@@ -35,8 +35,8 @@ public class ValidAnagram_242 {
             char_count[s.charAt(i)-'a']++;
         }
         for(int i=0; i<t.length(); i++){
-            if(char_count[t.charAt(i)-'a']==0) return false;
-            char_count[t.charAt(i)-'a']--;
+            if(char_count[t.charAt(i) - 'a']==0) return false;
+            char_count[t.charAt(i) - 'a']--;
 
         }
         return true;
