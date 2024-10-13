@@ -67,17 +67,17 @@ public class UserLinkedList {
                 //we have to handle 3 cases
                 //1. head
                 if(current==head){
-                    if(current==tail) tail = null;
+                    if(current==tail) tail = null;// head and tail might be the same element
                     head = current.next; //null
-                    current.next= null;
-
-                } else if (current==tail) {
-
-                }else{
+                    current.next= null; // for breaking link between current and next
+                } else if (current==tail) { //case2: deletion last element
+                    prev.next = null;
+                    tail = prev;
+                }else{ // case3: deletion in the middle
+                    prev.next = current.next;
+                    current.next=null;
                 }
                 size--;
-
-
             }
             prev=current;
             current=current.next;

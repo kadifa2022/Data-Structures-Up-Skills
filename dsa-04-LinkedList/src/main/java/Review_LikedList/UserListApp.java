@@ -1,6 +1,6 @@
 package Review_LikedList;
 
-import java.time.chrono.MinguoChronology;
+
 
 public class UserListApp {
     public static void main(String[] args) {
@@ -12,7 +12,10 @@ public class UserListApp {
         myLinkedListSingle.insertLast(new UserNode("Joe" , " UUUEnd"));
         myLinkedListSingle.printNames();
         myLinkedListSingle.insertFirst(new UserNode("SubZero", "test"));
-     myLinkedListSingle.printNames();
+        myLinkedListSingle.printNames();
+        myLinkedListSingle.deleteByName("Joe" );
+        System.out.println("Size : "+ myLinkedListSingle.size );
+        myLinkedListSingle.printNames();
 
 
     }
