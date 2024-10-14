@@ -28,7 +28,7 @@ public class UserLinkedList {
     void insertFirst(UserNode node){
         // case1: if list is empty
         if(isEmpty()){
-            head =tail = node;
+            head = tail = node;
         }else{// if is not empty
             node.next = head;
             head = node;
