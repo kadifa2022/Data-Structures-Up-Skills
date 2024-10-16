@@ -68,9 +68,6 @@ public class UserLinkedList2 {
                     current.next= null;
                 }
                 size--;
-
-
-
             }
             prev = current;
             current = current.next;
