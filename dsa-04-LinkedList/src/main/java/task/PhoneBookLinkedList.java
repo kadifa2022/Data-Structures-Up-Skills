@@ -1,5 +1,7 @@
 package task;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class PhoneBookLinkedList {
@@ -50,6 +52,22 @@ public class PhoneBookLinkedList {
         throw new NoSuchElementException(" doesn't exist");
 
     }
+    public List<PhoneNode> findAllByLastName(String lastName){
+        if(isEmpty()){
+            throw  new NoSuchElementException("List is Empty");
+        }
+        List<PhoneNode> listLastName= new ArrayList<>();
+
+        PhoneNode current = head;
+        while(current != null){
+            if(current.contact.getLastName().equals(lastName)){
+                listLastName.add(current);
+            }
+            current = current.next;
+        }
+        return listLastName;
+    }
+
 
 
 
