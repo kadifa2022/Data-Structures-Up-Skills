@@ -11,6 +11,7 @@
         <module name="dsa-02-Arrays" />
         <module name="practice" />
         <module name="Java-Core" />
+        <module name="dsa-05-HashMap" />
         <module name="dsa-03-CollectionsReview" />
         <module name="dsa-01-AlgorithmAnalysis" />
         <module name="review-lambda" />
