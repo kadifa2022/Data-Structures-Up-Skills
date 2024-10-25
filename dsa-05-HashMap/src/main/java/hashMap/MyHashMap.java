@@ -13,14 +13,17 @@ public class MyHashMap {
             this.hashMap.add(new Bucket());
         }
 
-}
-public void put(int key, int value){
+    }
+    public void put(int key, int value){
+        //calculate index address with modules
+        int hashCode = key % modNumber; // now i have index
+        this.hashMap.get(hashCode).update(key, value);
 
-}
-public int get(int key){
-        return 1;
-}
-public void remove(){
+    }
+    public int get(int key){
+            return 1;
+    }
+    public void remove(){
 
 }
 }
