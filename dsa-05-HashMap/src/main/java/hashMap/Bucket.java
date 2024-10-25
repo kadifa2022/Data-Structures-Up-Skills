@@ -17,7 +17,7 @@ public class Bucket {// creating empty bucket and Linked list for k,v pairs and 
     public void remove(int key){
         for(KeyValue<Integer, Integer> pair:bucket){
             if(pair.key.equals(key)) {
-                this.remove(key);
+                this.bucket.remove(pair);
                 break;
             }
         }
