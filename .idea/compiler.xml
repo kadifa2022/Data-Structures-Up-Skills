@@ -14,6 +14,7 @@
         <module name="dsa-05-HashMap" />
         <module name="dsa-03-CollectionsReview" />
         <module name="dsa-01-AlgorithmAnalysis" />
+        <module name="dsa-06-TreesReview" />
         <module name="review-lambda" />
       </profile>
     </annotationProcessing>
