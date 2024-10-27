@@ -16,6 +16,19 @@ public class MyTree {
     }
     //Task 1: Implement finding an integer value in a BST(binary search tree)
     boolean contains(int value){
+        if(root == null ) return false;
+        // i need to re-start my starting point
+        TNode current = root;
+        while(current != null){
+            // first case: value is less than current value
+            if(value < current.value) current = current.rightChild;
+            // second case: value is greater thn current value
+            else if (value > current.value) current = current.rightChild;
+            // third case: return true
+            else return  true;
+        }
+        return false;
+
 
     }
 
