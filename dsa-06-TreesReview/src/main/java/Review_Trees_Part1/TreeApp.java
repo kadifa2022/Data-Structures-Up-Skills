@@ -14,6 +14,12 @@ public class TreeApp {
 //        System.out.println();
 //        tree.postOrderTraversal(tree.root);
         tree.levelOrderTraversal();
+        System.out.println();
+        System.out.println("Iterative in-order");
+        tree.inOrderTraversalIterative(tree.root);
+        System.out.println();
+        System.out.println("Iterative pre-order");
+        tree.preOrderTraversalIterative(tree.root);
 
     }
 }
