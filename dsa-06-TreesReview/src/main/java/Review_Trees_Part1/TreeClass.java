@@ -2,6 +2,7 @@ package Review_Trees_Part1;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class TreeClass {
 // variables created from the classes are NULL by default.
@@ -44,8 +45,23 @@ public class TreeClass {
 
     }
     void preOrderTraversalIterative(TreeNode root){
+        // check if root is null
+        if(root == null )return;
+        // create stack and push starting point to the stack than children
+        Stack<TreeNode> stack = new Stack<>();
+        // push root to the stack
+        stack.push(root);
+        //while  loop(until stack is empty
+        while(!stack.isEmpty()) {
+            //pop stack
+            TreeNode poppedNode = stack.pop();
+            // print popped node
+            System.out.println(poppedNode.name + " , ");
+            // push popped node children into stack(rightChild first than left
+            if(poppedNode.rightChild!=null) stack.push(poppedNode.rightChild);
+            if(poppedNode.leftChild != null) stack.push(poppedNode.leftChild);
 
-
+        }
 
     }
     void inOrderTraversal(TreeNode root){// ascending order
@@ -55,6 +71,29 @@ public class TreeClass {
         inOrderTraversal(root.rightChild);
 
     }
+    void inOrderTraversalIterative(TreeNode root){
+        if(root == null) return; // termination
+        Stack< TreeNode >stack = new Stack<>();
+        TreeNode current = root;
+        //Traverse tree
+         while(current !=null || !stack.isEmpty()){
+             // find left most node in tree
+             while(current != null){
+             // push node before to stack branching left
+                 stack.push(current);
+                 current = current.leftChild;
+             }// current is null now
+             current = stack.pop();
+             System.out.println(current.name + " , ");
+             // now it's right child turn
+             current = current.rightChild;
+            // end of while loop
+         }
+
+
+    }
+
+
     void postOrderTraversal(TreeNode root){
         if(root == null) return;
         postOrderTraversal(root.rightChild);
