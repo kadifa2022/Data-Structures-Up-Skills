@@ -16,6 +16,7 @@
         <module name="dsa-01-AlgorithmAnalysis" />
         <module name="dsa-06-TreesReview" />
         <module name="review-lambda" />
+        <module name="dsa-07-Heap" />
       </profile>
     </annotationProcessing>
   </component>
