@@ -13,7 +13,7 @@ public class VisualizeTree {
             trunk.str= ".———";
             prev_str = "  |";
         }else{
-            trunk.str ="`———";
+            trunk.str = "`———";
             prev.str = prev_str;
         }
         showTrunks(trunk);
@@ -22,16 +22,16 @@ public class VisualizeTree {
         if(prev !=null){
             prev.str = prev_str;
         }
-        trunk.str = "  |";
+        trunk.str = "   |";
         printTree(root.leftChild, trunk, false);
     }
 
 
     public static void showTrunks(Trunk p) {
-        if(p==null){
+        if( p == null ){
             return;
         }
         showTrunks(p.prev);
-        System.out.println(p.str);
+        System.out.print(p.str);
     }
 }
