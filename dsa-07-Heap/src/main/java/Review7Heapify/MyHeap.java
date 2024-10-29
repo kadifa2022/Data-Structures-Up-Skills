@@ -18,8 +18,8 @@ public class MyHeap {
 
     }
 
-    private void heapify() {
-        int startIndex = (size/2)-1; //
+    public void heapify() {
+        int startIndex = (size/2)-1; //starts from half array
         for(int i = startIndex; i>=0; i--){
             // if current element is not valid parent  bubble down until it is valid.
             heapifyCurrent(i);
@@ -28,8 +28,8 @@ public class MyHeap {
 
     }
 
-    private void heapifyCurrent(int index) {
-        if(!isValidParent(index)){
+    public void heapifyCurrent(int index) {
+        if(!isValidParent(index)){ //this will continue until the parent is valid and then will terminate and return 0
             int largestChildIndex = largerChildIndex(index);
             swap(index, largestChildIndex);
             heapifyCurrent(largestChildIndex);
@@ -50,7 +50,7 @@ public class MyHeap {
         }
     }
 
-    private void bubbleUpp() {
+    public void bubbleUpp() {
         // calculate start point index
         int index = size -1;
         // compare new inserted value in proper place
@@ -74,7 +74,7 @@ public class MyHeap {
         }
     }
 
-    private void bubbleDown() {
+    public void bubbleDown() {
         int index = 0; // starting point we place the last element to the index 0
         int largerChildIndex; // need to find largerChildIndex
         while(index<=size && !isValidParent(index)){ // comparing parent with larger child and use another method if is valid parent or not
@@ -85,7 +85,7 @@ public class MyHeap {
         }
     }
 
-    private int largerChildIndex(int index) {
+    public int largerChildIndex(int index) {
         if(!hasLeftChild(index)) return index;
         else if (!hasRightChild(index)) {
 
@@ -94,48 +94,48 @@ public class MyHeap {
         return items[leftChildIndex(index)]> items [rightChildIndex(index)] ? leftChildIndex(index) : rightChildIndex(index);
     }
 
-    private boolean isValidParent(int index) { // here we will compare parent with children
+   public boolean isValidParent(int index) { // here we will compare parent with children
         if(!hasLeftChild(index)) return true;
         else{
-            boolean isValid = false;
+            boolean isValid = (items[index]>= items[leftChildIndex(index)]);
             if(hasRightChild(index)){
-                isValid = (items[index]>= items[leftChildIndex(index)] && items[index]>=items[rightChildIndex(index)]);
+                isValid =(items[index]>=items[leftChildIndex(index)] && items[index]>= items[rightChildIndex(index)]);
             }
             return  isValid;
         }
     }
 
-    private boolean hasRightChild(int index) {
-      return   rightChildIndex(index)<= size;
+    public boolean hasRightChild(int index) {
+      return   rightChildIndex(index)< size;
     }
 
-    private int  rightChildIndex(int index) {
-        return index * 2+2;
+    public  int  rightChildIndex(int index) {
+        return index*2 +2;
 
     }
 
-    private boolean hasLeftChild(int index) {
-        return leftChildIndex(index)<= size;
+    public boolean hasLeftChild(int index) {
+        return leftChildIndex(index)< size;
     }
 
-    private int leftChildIndex(int index) {
-        return index*2+1;
+    public int leftChildIndex(int index) {
+        return index*2 +1;
     }
 
 
-    private void swap(int first, int second) {// swap method
+    public void swap(int first, int second) {// swap method
         int temp = items[first];
         items[first] = items[second];
         items[second]= temp;
     }
 
-    private int parentIndex(int index) {
+    public int parentIndex(int index) {
         return (index-1)/2;
     }
 
     public void printHeap(){
-        for(int i =0; i<size; i++){
-            System.out.println(items[i] + " , ");
+        for(int i = 0; i < size; i++){
+            System.out.print(items[i] + "  ");
         }
         System.out.println();
     }

@@ -8,6 +8,8 @@ public class HeapApp {
         heap.insert(81);
         heap.printHeap();
         heap.insert(10);
+        heap.remove();
+        int [] numbers ={1,2,5,6,8,21,0};
 
 
 
