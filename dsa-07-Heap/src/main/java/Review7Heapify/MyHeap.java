@@ -135,7 +135,7 @@ public class MyHeap {
 
     public void printHeap(){
         for(int i = 0; i < size; i++){
-            System.out.print(items[i] + "  ");
+            System.out.print(items[i] + ", ");
         }
         System.out.println();
     }
