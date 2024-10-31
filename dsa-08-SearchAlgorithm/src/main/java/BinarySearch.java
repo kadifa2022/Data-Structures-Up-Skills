@@ -19,4 +19,11 @@ public class BinarySearch {
         }
         return -1;
     }
+    public static int binarySearchRecursive(int [] array, int data, int left , int right){
+        if(left> right) return -1;
+        int middle = (left + right)/ 2;
+        if(array[middle] == data) return middle;
+        if(data<array[middle]) return binarySearchRecursive(array, data, left , middle-1);
+        else return binarySearchRecursive(array, data, middle+1, right);
+    }
 }
