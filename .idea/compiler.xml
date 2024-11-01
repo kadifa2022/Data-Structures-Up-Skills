@@ -18,6 +18,7 @@
         <module name="dsa-06-TreesReview" />
         <module name="review-lambda" />
         <module name="dsa-07-Heap" />
+        <module name="dsa-09-Sorting" />
       </profile>
     </annotationProcessing>
   </component>
