@@ -44,7 +44,6 @@ public class Search2DMatrix {
             if (target == midValue) return true;
             else if(target<midValue) right= midIndex -1;
             else left= midIndex +1;
-
         }
         return false;
     }
