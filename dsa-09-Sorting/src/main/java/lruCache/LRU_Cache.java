@@ -1,13 +1,13 @@
 package lruCache;
 
-import javax.swing.tree.TreeNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class LRU_Cache {
     int size;
     int capacity;
-    HashMap<Integer,DNode> cacheMap = new HashMap<Integer, DNode>();
+    HashMap<Integer,DNode> cacheMap = new HashMap<Integer, DNode>();// Will hold address of the nodes
     // I need two dummy nodes
      DNode head;
      DNode tail;
@@ -22,26 +22,26 @@ public class LRU_Cache {
     }
 
 
-  public void addNode(DNode node){
+  public void addNode(DNode node){// help method
         node.prev= head;
         node.next = head.next;
         head.next.prev = node;
-        head.next = node;
+        head.next = node; // add node after head
 
   }
-  public void removeNode(DNode node){// remove node
-        DNode prevNode = node.prev; // creeated dummy nods
+  public void removeNode(DNode node){// remove node help method
+        DNode prevNode = node.prev; // created dummy nods
         DNode nextNode = node.next;
 
         prevNode.next = nextNode;
         nextNode.prev = prevNode;
 
   }
-  public void moveToFirst(DNode node){
+  public void moveToFirst(DNode node){ // help method
         removeNode(node);
-        addNode(node);
+        addNode(node);// insert into first place
   }
-  public DNode popLast(){
+  public DNode popLast(){ // help method
         DNode  popped = tail.prev;
         removeNode(popped);
         return popped;
@@ -66,7 +66,7 @@ public class LRU_Cache {
             addNode(newNode);// put in liked list
             size ++;
             if(size> capacity){
-                DNode last = popLast();// remove from the linked list
+                DNode last = popLast();// remove from the linked list if is full of capacity
                 cacheMap.remove(last.key);
                 size --;
             }
@@ -75,11 +75,18 @@ public class LRU_Cache {
             moveToFirst(node);// make it recent
         }
     }
-    void printLRU() {
+    void printLRU() { // print lru
         for (Map.Entry<Integer, DNode> entry : cacheMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
-
-
     }
+   void  printLinkedList(){// print linked list method
+        DNode curr = head;
+        while(curr!=null){
+            if(curr.value != 0) System.out.print(curr.value);
+            curr = curr.next;
+        }
+
+   }
+
 }
