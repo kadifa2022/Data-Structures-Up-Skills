@@ -18,7 +18,7 @@ public class MapReview {
     }
 
     public static Character findFirstNonRepeatingCharacter(String str) {
-        // create map -> cost me space complexity using another ds
+        // create map -> cost me additional space complexity using another ds
         Map<Character, Integer> map = new TreeMap<>();
         int count;
         // count the frequency of char
@@ -33,7 +33,7 @@ public class MapReview {
         for(Character ch: str.toCharArray()){
             if(map.get(ch) == 1) return ch;
         }
-   return null;
+   return null;// will return null if we don't find non repeating
     }
 
 }
