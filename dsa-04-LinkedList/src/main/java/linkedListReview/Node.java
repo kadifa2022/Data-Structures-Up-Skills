@@ -1,11 +1,12 @@
 package linkedListReview;
 
 public class Node {
+
+
     int id;
+    Node next;
 
     public Node(int id) {
         this.id = id;
     }
-
-    Node next; // address/ referring to another element
 }

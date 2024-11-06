@@ -1,4 +1,4 @@
-package linkedListReview;
+package linkedListReview.practice;
 
 import java.util.ArrayList;
 
