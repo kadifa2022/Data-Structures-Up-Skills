@@ -22,15 +22,51 @@ public class MySinglyList {
              size++;
          }
      }
+
+     void deleteById(int id){
+         // check if empty
+         if (isEmpty()) {
+             System.out.println("List is empty");
+         }
+         // assign prev and current with the head
+         Node prev = head;
+         Node current = head;
+         // if we find match we need to check 3 cases
+         while(current != null) {
+             if (current.id == id) { // if there is match => in this if block i need to handle 3 cases
+                 // case1: head
+                 if (current == head) {
+                     head = current.next;
+                     current.next = null;
+                     size--;
+                 } else if (current == tail) {  // case2: ex-tail will be eligible for GC
+                     tail = prev;
+                     prev.next = null;
+                     size--;
+                 } else { //case3: middle - current will be eligible for Garbage collection
+                     prev.next = current.next;
+                     current.next = null;
+                 }
+                 size--;
+             }
+             // move forward of the element of the list
+                 prev = current;// match
+                 current = current.next;
+             }
+         }
+
+
      void printNodes(){
         Node current = head;
         while(current !=null) {
+            // if the current next is last element print add to id null
             if (current.next == null) System.out.println(current.id + " => null ");
-            else {
+            else {// if current is not null print
                 System.out.print(current.id + " => ");
-                current = current.next;
+            }
+                current = current.next;// jump to next element
             }
         }
 
      }
-}
+
