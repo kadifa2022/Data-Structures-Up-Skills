@@ -7,11 +7,14 @@ public class MySinglyLikedListApp {
         System.out.println(mySinglyList.isEmpty());
 
         for(int i = 0; i < 10; i++){
-            mySinglyList.add(i);
+            mySinglyList.addToLast(i);
         }
        mySinglyList.printNodes();
-       mySinglyList.deleteById(1);
-       mySinglyList.printNodes();
+//       mySinglyList.deleteById(9);
+//       mySinglyList.printNodes();
+//        System.out.println("index of 3: " + mySinglyList.indexOf(3));
+      mySinglyList.addFirst(12);
+
 
 
     }

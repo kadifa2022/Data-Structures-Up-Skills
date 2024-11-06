@@ -10,10 +10,10 @@ public class MySinglyList {
          return  head == null;
      }
 
-     void add(int data){ // insert a node
+     void addToLast(int data){ // insert a node to the tail
          // create a new node object from data
          Node node = new Node(data);
-         if(isEmpty()){ // if the lest is empty
+         if(isEmpty()){ // if the list is empty
              head = tail = node;
              size++;
          }else{// if there are elements in list
@@ -21,6 +21,19 @@ public class MySinglyList {
              tail = node;
              size++;
          }
+     }
+     void addFirst(int data){
+         // create new node from data
+         Node node = new Node(data);
+         // case 1; list is empty
+         if(isEmpty()){
+             head = tail =node;
+         }else{//case 2: list is not empty
+             node.next = head;
+             head = node;
+         }
+         // increase size
+         size ++;
      }
 
      void deleteById(int id){
@@ -68,7 +81,9 @@ public class MySinglyList {
          return -1;
          }
 
+  public void removeKthFromLast(int k){
 
+  }
 
      void printNodes(){
         Node current = head;
