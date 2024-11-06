@@ -54,6 +54,20 @@ public class MySinglyList {
                  current = current.next;
              }
          }
+         int indexOf(int id){
+         if (isEmpty()) return -1;
+
+         int pos = 0;
+         // iterate  through list
+         Node current = head; // set my current with starting element
+         while(current != null){
+             if(current.id == id) return pos;
+             pos ++;
+             current = current.next;
+             }
+         return -1;
+         }
+
 
 
      void printNodes(){

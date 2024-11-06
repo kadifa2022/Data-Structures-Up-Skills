@@ -9,7 +9,9 @@ public class MySinglyLikedListApp {
         for(int i = 0; i < 10; i++){
             mySinglyList.add(i);
         }
-        mySinglyList.printNodes();
+       mySinglyList.printNodes();
+       mySinglyList.deleteById(1);
+       mySinglyList.printNodes();
 
 
     }
