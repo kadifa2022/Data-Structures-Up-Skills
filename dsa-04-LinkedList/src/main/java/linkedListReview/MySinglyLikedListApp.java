@@ -10,10 +10,13 @@ public class MySinglyLikedListApp {
             mySinglyList.addToLast(i);
         }
        mySinglyList.printNodes();
+        System.out.println("kth item from the last :" + mySinglyList.getKthFromLast(3));
+        mySinglyList.removeKthFromLast(3);
+        mySinglyList.printNodes();
 //       mySinglyList.deleteById(9);
 //       mySinglyList.printNodes();
 //        System.out.println("index of 3: " + mySinglyList.indexOf(3));
-      mySinglyList.addFirst(12);
+ //     mySinglyList.addFirst(12);
 
 
 
