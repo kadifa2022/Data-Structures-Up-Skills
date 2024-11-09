@@ -7,17 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="practice" />
+        <module name="dsa-06-TreesReview" />
+        <module name="dsa-QueuesAndHashing" />
+        <module name="review-lambda" />
+        <module name="dsa-07-Heap" />
         <module name="dsa-04-LinkedList" />
         <module name="dsa-02-Arrays" />
-        <module name="practice" />
         <module name="Java-Core" />
         <module name="dsa-05-HashMap" />
         <module name="dsa-08-SearchAlgorithm" />
         <module name="dsa-03-CollectionsReview" />
         <module name="dsa-01-AlgorithmAnalysis" />
-        <module name="dsa-06-TreesReview" />
-        <module name="review-lambda" />
-        <module name="dsa-07-Heap" />
         <module name="dsa-09-Sorting" />
       </profile>
     </annotationProcessing>
