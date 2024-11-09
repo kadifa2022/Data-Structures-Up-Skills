@@ -100,6 +100,7 @@ public class MySinglyList {
         return ptr1.id;
 
     }
+
     public void removeKthFromLast(int k) {
         // create 3 pointers
         Node ptr1 = head;
@@ -127,8 +128,31 @@ public class MySinglyList {
         } else {
             prev.next = ptr1.next;
             ptr1.next = null;
-            size --;
+            size--;
         }
+    }
+
+    public void removeKthFromLast2(int k) {// Lorens solution
+        Node ptr1 = head;
+        Node ptr2 = head;
+
+        for (int i = 0; i < k - 1; i++) {
+            ptr2 = ptr2.next;
+
+            if (ptr2 == null) System.out.println("Less than kth elements");
+            else if (ptr2.next == null) {
+                head = ptr1.next;
+                ptr1.next = null;
+                return;
+            }
+        }
+        while (ptr2.next.next !=null){
+            ptr1 = ptr1.next;
+            ptr2= ptr2.next;
+        }
+        ptr1.next = ptr1.next.next;
+        ptr1= ptr1.next;
+        ptr1=null;
 
     }
 
