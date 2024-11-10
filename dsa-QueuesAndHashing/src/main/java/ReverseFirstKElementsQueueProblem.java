@@ -31,7 +31,6 @@ public class ReverseFirstKElementsQueueProblem {
         for(int i = 0; i < queue.size - k; i ++){
             queue.enqueue(queue.dequeue());
         }
-
         return queue;
 
     }
